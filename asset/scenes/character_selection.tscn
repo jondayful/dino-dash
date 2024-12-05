@@ -1,0 +1,177 @@
+[gd_scene load_steps=24 format=3 uid="uid://dwhnpcq6eaorj"]
+
+[ext_resource type="FontFile" uid="uid://da1cnbb6j3tpm" path="res://asset/font/retro.ttf" id="1_p45cy"]
+[ext_resource type="Script" path="res://asset/scenes/CharacterSelection.gd" id="1_pijue"]
+[ext_resource type="Texture2D" uid="uid://b3tpdulkf2pae" path="res://asset/img/character/doux.png" id="2_jyte4"]
+[ext_resource type="Texture2D" uid="uid://d0in67fogv4dg" path="res://asset/img/character/mort.png" id="3_ntxo2"]
+[ext_resource type="Texture2D" uid="uid://dg8uy3wykimuc" path="res://asset/img/character/doux_choose.png" id="4_0tref"]
+[ext_resource type="Texture2D" uid="uid://02ixp661mi88" path="res://asset/img/character/tard.png" id="4_jmkn8"]
+[ext_resource type="Texture2D" uid="uid://ppx7dhfcoony" path="res://asset/img/character/vita.png" id="5_dajw1"]
+[ext_resource type="Texture2D" uid="uid://j2gxmep6dd84" path="res://asset/img/character/mort_choose.png" id="6_nivux"]
+[ext_resource type="Texture2D" uid="uid://c4cnbp7r1a8x8" path="res://asset/img/background/Hills Layer 01.png" id="7_e43tt"]
+[ext_resource type="Texture2D" uid="uid://b7a4jhwqeylf6" path="res://asset/img/background/Hills Layer 02.png" id="8_0lvft"]
+[ext_resource type="Texture2D" uid="uid://2b5wnc2lqtbi" path="res://asset/img/character/tard_choose.png" id="8_5ovyu"]
+[ext_resource type="Texture2D" uid="uid://s4lkxyrh8sti" path="res://asset/img/background/Hills Layer 03.png" id="9_6i34o"]
+[ext_resource type="Texture2D" uid="uid://cur5ggw4a2snh" path="res://asset/img/background/Hills Layer 04.png" id="10_04ub0"]
+[ext_resource type="Texture2D" uid="uid://hwmckvu61jq6" path="res://asset/img/character/vita_choose.png" id="10_8komq"]
+[ext_resource type="Texture2D" uid="uid://dme3rv8bjdht7" path="res://asset/img/background/Hills Layer 05.png" id="11_0pcaf"]
+[ext_resource type="Texture2D" uid="uid://p8fudk684tve" path="res://asset/img/background/Hills Layer 06.png" id="12_r6a6b"]
+[ext_resource type="AudioStream" uid="uid://bxcltmc4yhig2" path="res://asset/sound/hover_doux.wav" id="17_vl7ca"]
+[ext_resource type="AudioStream" uid="uid://bqgksqwyf8pu5" path="res://asset/sound/hover_mort.wav" id="18_ja6do"]
+[ext_resource type="AudioStream" uid="uid://dvnhd77555q4h" path="res://asset/sound/hover_tard.wav" id="19_2ddka"]
+[ext_resource type="AudioStream" uid="uid://csuioe2uww07s" path="res://asset/sound/hover_vita.wav" id="20_ya3fb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_up287"]
+bg_color = Color(0.739206, 0.297375, 0.281116, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hudud"]
+bg_color = Color(0.893621, 0.465079, 0.437366, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s6eyc"]
+bg_color = Color(0.945971, 0.638289, 0.610726, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pijue")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 192.0
+offset_right = 1132.0
+offset_bottom = 392.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.368627, 0.427451, 0.176471, 1)
+theme_override_colors/font_shadow_color = Color(0.145098, 0.117647, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("1_p45cy")
+theme_override_font_sizes/font_size = 40
+text = "CHOOSE YOUR CHARACTER"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 241.0
+offset_right = 210.0
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+alignment = 1
+
+[node name="TextureButton_doux" type="TextureButton" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("2_jyte4")
+texture_pressed = ExtResource("4_0tref")
+texture_hover = ExtResource("4_0tref")
+
+[node name="TextureButton_mort" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("3_ntxo2")
+texture_pressed = ExtResource("6_nivux")
+texture_hover = ExtResource("6_nivux")
+
+[node name="TextureButton_tard" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("4_jmkn8")
+texture_pressed = ExtResource("8_5ovyu")
+texture_hover = ExtResource("8_5ovyu")
+
+[node name="TextureButton_vita" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("5_dajw1")
+texture_pressed = ExtResource("10_8komq")
+texture_hover = ExtResource("10_8komq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(2.25, 2.531)
+texture = ExtResource("7_e43tt")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+scale = Vector2(2.25, 2.531)
+texture = ExtResource("8_0lvft")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+scale = Vector2(2.25, 2.531)
+texture = ExtResource("9_6i34o")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+scale = Vector2(2.25, 2.531)
+texture = ExtResource("10_04ub0")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+scale = Vector2(2.25, 2.531)
+texture = ExtResource("11_0pcaf")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+scale = Vector2(2.25, 2.531)
+texture = ExtResource("12_r6a6b")
+centered = false
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 388.0
+offset_top = 388.0
+offset_right = 724.0
+offset_bottom = 447.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.145098, 0.117647, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("1_p45cy")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_up287")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hudud")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s6eyc")
+text = "START GAME"
+
+[node name="AudioStreamPlayer_doux" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_vl7ca")
+volume_db = -25.0
+
+[node name="AudioStreamPlayer_mort" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_ja6do")
+volume_db = -25.0
+
+[node name="AudioStreamPlayer_tard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_2ddka")
+volume_db = -25.0
+
+[node name="AudioStreamPlayer_vita" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_ya3fb")
+volume_db = -25.0
+
+[node name="AudioStreamPlayer_select" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0

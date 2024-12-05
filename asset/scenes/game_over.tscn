@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://3oy2o81pqrdv"]
+
+[ext_resource type="Script" path="res://asset/scenes/game_over.gd" id="1_cweo8"]
+[ext_resource type="FontFile" uid="uid://da1cnbb6j3tpm" path="res://asset/font/retro.ttf" id="1_e52g3"]
+[ext_resource type="AudioStream" uid="uid://h61nuxbs686x" path="res://asset/sound/game_over_audio.wav" id="3_vsxro"]
+[ext_resource type="AudioStream" uid="uid://dyuk6r77k7tqw" path="res://asset/sound/select.wav" id="4_f1wim"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsuri"]
+bg_color = Color(0.739206, 0.297375, 0.281116, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcrlf"]
+bg_color = Color(0.893621, 0.465079, 0.437366, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1x58p"]
+bg_color = Color(0.945971, 0.638289, 0.610726, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_cweo8")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -29.5
+offset_right = 138.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.145098, 0.117647, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("1_e52g3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_jsuri")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jcrlf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1x58p")
+text = "RESTART"
+
+[node name="Button_Character" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -263.0
+offset_top = 64.0
+offset_right = 265.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.145098, 0.117647, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("1_e52g3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_jsuri")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jcrlf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1x58p")
+text = "CHOOSE CHARACTER"
+
+[node name="GameOver_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_vsxro")
+volume_db = -10.0
+
+[node name="select_restart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f1wim")
+volume_db = -10.0
+
+[node name="select_character" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f1wim")
+volume_db = -10.0
